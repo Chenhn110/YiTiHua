@@ -10,11 +10,15 @@ $("#login").click(function(){
             }; 
     $.ajax({
     	type: "POST",
-        url: "/user/login",
+        url: "http://localhost:8080/user/login",
         data: data, 
         dataType: 'JSON',
-        success:function(res){
-        	alert("登录成功！");
+        success:function(data){
+        	if(data.status===true) {
+                	alert("登录成功！");
+            	}else{
+                	alert("登录失败！");
+            	}
         },
         error:function(){
         	alert("error!");
