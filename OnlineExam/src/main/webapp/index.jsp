@@ -1,23 +1,18 @@
-<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
-<%--<%@ taglib uri="/struts-tags" prefix="s" %>--%>
-<%
-    String path = request.getContextPath();
-    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-%>
-
 <html>
     <head>
         <base href="<%=basePath%>">
         <title>学生登录</title>
-        <meta http-equiv="pragma" content="no-cache">
-        <meta http-equiv="cache-control" content="no-cache">
-        <meta http-equiv="expires" content="0">
-        <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-        <meta http-equiv="description" content="This is my page">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <style>
-            body{height:100%;background:#16a085;overflow:hidden;}
-            canvas{z-index:-1;position:absolute;}
+            body{
+                height:100%;
+                background:#16a085;
+                overflow:hidden;
+            }
+            canvas{
+                z-index:-1;
+                position:absolute;
+            }
         </style>
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/Particleground.js"></script>
@@ -32,10 +27,6 @@
                 });
                 //验证码
                 createCode();
-                //测试提交，对接程序删除即可
-                // $(".submit_btn").click(function(){
-                //     location.href="javascrpt:;"/*tpa=http://***index.html*/;
-                // });
             });
         </script>
     </head>
